@@ -3,8 +3,7 @@
  La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
 */
 
- const num1 = 20;
-const num2 = 20;
+ 
 
 function crazySum(num1, num2){
     if(num1 === num2){
@@ -14,16 +13,16 @@ function crazySum(num1, num2){
         return num1 + num2;
     }
 }
+console.log(crazySum(15, 20)) 
 console.log(crazySum(20, 20)) 
-
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
-const num3 = 400;
+
 
 function boundary(num3){
-    if (num3 > 20 && num3 <= 100 || num3 === 400){
+    if ((num3 >= 20 && num3 <= 100) || num3 === 400){
         return true;
     }
         
@@ -32,26 +31,50 @@ function boundary(num3){
     }
 }
 
-console.log(boundary(400)); 
+console.log(boundary(400));
+console.log(boundary(50));
+console.log(boundary(15));
+ 
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-const parola = 'epicode';
-const maiuscolo = parola.toUpperCase();
 
 
-function reverseString(maiuscolo){
-    return maiuscolo.split('').reverse().join('');
+
+function reverseString(string){
+    
+    return string.split('').reverse().join('');
 }
 
 console.log(reverseString('EPICODE')); 
 
+
+
+function reverseString(string){
+    let stringReverse = '';
+    for(let i = string.length - 1; i >= 0; i--){
+        stringReverse = stringReverse + string[i];
+    }
+    return stringReverse 
+}
+
+console.log(reverseString('EPICODE'));
+
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
-
+function upperFirst(string){
+    let words = string.split(' ');
+    for(let i = 0; i < words.length; i++){
+        let currentWord = words[i];
+        currentWord = currentWord.charAt(0).toUpperCase() + currentWord.slice(1);
+        words[i] = currentWord
+    }
+    return words.join(' ');
+}
+console.log(upperFirst('ciao sono virgola e sono un gattino'))
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
