@@ -83,7 +83,11 @@ console.log(upperFirst('ciao sono virgola e sono un gattino'))
 function giveMeRandom(n){
     let numeri = [];
     for(let i = 0; i < n; i++){
-    numeri[i] = Math.floor(Math.random() * 11) 
+        let randomNumber = Math.floor(Math.random() * 11);
+        while(numeri.includes(randomNumber)){
+            randomNumber =  Math.floor(Math.random() * 11);
+        }
+    numeri[i] = randomNumber; 
     }
     return numeri;
     
