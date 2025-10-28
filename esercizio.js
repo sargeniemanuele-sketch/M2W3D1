@@ -80,11 +80,15 @@ console.log(upperFirst('ciao sono virgola e sono un gattino'))
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-const n = 20;
-
 function giveMeRandom(n){
+    let numeri = [];
+    for(let i = 0; i < n; i++){
+    numeri[i] = Math.floor(Math.random() * 11) 
+    }
+    return numeri;
     
 }
+console.log(giveMeRandom(10));
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
