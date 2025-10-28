@@ -38,7 +38,7 @@ console.log(boundary(400)); *\
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-const parola = 'epicode';
+/* const parola = 'epicode';
 const maiuscolo = parola.toUpperCase();
 
 
@@ -46,20 +46,22 @@ function reverseString(maiuscolo){
     return maiuscolo.split('').reverse().join('');
 }
 
-console.log(reverseString('EPICODE'));
+console.log(reverseString('EPICODE')); *\
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const n = 20;
 
+function giveMeRandom(n){
+    
+}
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
