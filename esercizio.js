@@ -113,7 +113,6 @@ console.log(area(5,7));
 */
 
 function crazyDiff(n1){
-    const n2 = 19;
     let diff = Math.abs(n1 - 19);
     if(diff > 19){
         return diff * 3;
@@ -147,10 +146,39 @@ console.log(codify('code di epicode'));
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(numPos){
+    if(!numPos.isInteger <= 0){
+        return false;
+    }
+    else if(numPos % 3 === 0 || numPos % 7 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(check3and7(-5)); //false perchè è negativo
+console.log(check3and7(3.5)); //false perchè non è intero
+console.log(check3and7(10)); //false perchè non è multiplo ne di 10 ne di 3
+console.log(check3and7(15)); //true perchè è multiplo di 3
+console.log(check3and7(28)); //true perchè è multiplo di 7
+console.log(check3and7(21)); //true perchè è multiplo sia di 3 che di 7
+
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(string){
+    if(string.length <= 2){
+        return string
+    }
+    else{
+        return string.slice(1,-1);
+    }
+}
+console.log(cutString('ciao a tutti'));
+console.log(cutString('ciao'));
+console.log(cutString('ep'));
+
+
