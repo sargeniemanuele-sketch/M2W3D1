@@ -93,12 +93,19 @@ function giveMeRandom(n){
     
 }
 console.log(giveMeRandom(10));
+
+
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function area(l1,l2){
+    const rettAre = l1 * l2;
+    return rettAre;
+}
+
+console.log(area(5,7));
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
