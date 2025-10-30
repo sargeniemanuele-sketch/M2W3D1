@@ -112,14 +112,34 @@ console.log(area(5,7));
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(n1){
+    const n2 = 19;
+    let diff = Math.abs(n1 - 19);
+    if(diff > 19){
+        return diff * 3;
+    }
+    else{
+        return diff;
+    }
+}
+console.log(crazyDiff(30,19));
+console.log(crazyDiff(100,19));
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function codify (stringa){
+    if(stringa.startsWith('code')){
+        return stringa;
+    }
+    else{
+        return 'code ' + stringa;
+    }
+}
+console.log(codify('ciao a tutti'));
+console.log(codify('code di epicode'));
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
